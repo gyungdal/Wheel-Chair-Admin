@@ -1,0 +1,60 @@
+<LinearLayout android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:gravity="center"
+        android:id = "@+id/model_number"
+        android:layout_width = "0dp"
+        android:layout_height = "match_parent"
+        android:layout_weight = "1.5"
+        android:ellipsize = "end"
+        android:padding = "5dp"
+        android:text = "기기모델번호"
+        android:singleLine = "true" />
+
+    <TextView
+        android:gravity="center"
+        android:id = "@+id/company_name"
+        android:layout_width = "0dp"
+        android:layout_height = "match_parent"
+        android:layout_weight = "1"
+        android:ellipsize = "end"
+        android:text = "기관명"
+        android:padding = "5dp"
+        android:singleLine = "true" />
+
+    <TextView
+        android:gravity="center"
+        android:id = "@+id/user_name"
+        android:layout_width = "0dp"
+        android:layout_height = "match_parent"
+        android:layout_weight = "1"
+        android:ellipsize = "end"
+        android:text = "이름"
+        android:padding = "5dp"
+        android:singleLine = "true" />
+
+    <TextView
+        android:gravity="center"
+        android:id = "@+id/phone_number"
+        android:layout_width = "0dp"
+        android:layout_height = "match_parent"
+        android:layout_weight = "2"
+        android:ellipsize = "end"
+        android:padding = "5dp"
+        android:text = "휴대폰번호"
+        android:singleLine = "true" />
+    <TextView
+        android:gravity="center"
+        android:id = "@+id/model_address"
+        android:layout_width = "0dp"
+        android:layout_height = "match_parent"
+        android:layout_weight = "1.5"
+        android:ellipsize = "end"
+        android:padding = "5dp"
+        android:text = "고유주소"
+        android:singleLine = "true"
+        />
+</LinearLayout>
