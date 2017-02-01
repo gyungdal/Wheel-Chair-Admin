@@ -5,14 +5,15 @@ package com.codezero.wheelchairadmin.fragment.message;
  */
 
 public class MessageData {
-    private String name, number, msg, company;
-    public MessageData(String name, String number, String msg, String company){
+    private String idx, name, number, msg, company;
+    public MessageData(String idx, String name, String number, String msg, String company){
+        this.idx = idx;
         this.name = name;
         this.number = number;
         this.msg = msg;
         this.company = company;
     }
-
+    public String getIdx(){return this.idx;}
     public String getName(){
         return this.name;
     }

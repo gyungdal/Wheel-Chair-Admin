@@ -5,27 +5,55 @@
     density="xxxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="30603752304686"
+    timestamp="18011816237182"
     token="-4786258885491208034"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="FIELD_TYPE_CHANGE" >
 
     <task
         name="javac"
-        duration="599" />
+        duration="138" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="138" />
+        duration="18" />
     <task
         name="verifier"
-        duration="23" />
+        duration="13" />
 
     <artifact
-        location="D:\Develop\Android\APP\WheelChairAdmin\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="D:\Develop\Android\APP\WheelChairAdmin\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+        type="DEX" />
 
+    <build
+        timestamp="17105874862716"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="D:\Develop\Android\APP\WheelChairAdmin\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="17606628976885"
+        verifier="METHOD_DELETED" >
+        <artifact
+            location="D:\Develop\Android\APP\WheelChairAdmin\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="17994999217778"
+        verifier="CLASS_ADDED" >
+        <artifact
+            location="D:\Develop\Android\APP\WheelChairAdmin\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="18011816237182"
+        verifier="FIELD_TYPE_CHANGE" >
+        <artifact
+            location="D:\Develop\Android\APP\WheelChairAdmin\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
+    </build>
     <build
         timestamp="30603752304686"
         verifier="FULL_BUILD_REQUESTED" >

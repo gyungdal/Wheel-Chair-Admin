@@ -4,17 +4,22 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.util.AsyncListUtil;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.codezero.wheelchairadmin.R;
+import com.codezero.wheelchairadmin.fragment.message.comunity.ReadMessage;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by GyungDal on 2017-01-31.
@@ -106,6 +111,18 @@ public class MessageListViewAdapter extends BaseAdapter {
                 builder.setPositiveButton("Finish", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        try {
+                            boolean delete = new ReadMessage(item.getIdx())
+                                    .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR).get();
+                            if(delete)
+                                removeData(item);
+                            else
+                                Toast.makeText(activity, "read checking fail", Toast.LENGTH_SHORT).show();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        } catch (ExecutionException e) {
+                            e.printStackTrace();
+                        }
                         dialog.dismiss();
                     }
                 });
@@ -115,5 +132,14 @@ public class MessageListViewAdapter extends BaseAdapter {
 
 
         return convertView;
+    }
+
+    private void removeData(MessageData data){
+        this.data.remove(data);
+        changeData();
+    }
+
+    public void changeData(){
+        this.notifyDataSetChanged();
     }
 }
